@@ -19,7 +19,7 @@ RUN chmod +x /root/run.sh
 
 CMD ["-v"]
 
-Entrypoint ["/root/run.sh"]
+ENTRYPOINT ["/root/run.sh"]
 
 #build
 #docker build -t airplay-dlna:v2 .
