@@ -1,6 +1,6 @@
 FROM debian:stable-slim AS base
 
-RUN apt-get update && apt-get install -y shairport-sync gmediarender \
+RUN apt-get update && apt-get install -y --no-install-recommends shairport-sync gmediarender \
     gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad && \
     apt-get autoremove -y && apt-get clean && apt-get autoclean && \
     rm -rf /var/lib/apt/lists/*
